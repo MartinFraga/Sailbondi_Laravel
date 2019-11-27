@@ -23,4 +23,13 @@ Route::get('/contact', 'MainController@contact');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
+
+
+Route::group(["prefix" => "pasajes"], function() {
+    Route::get('/', ['uses' => 'PasajesController@index']);
+
+    Route::get('/show/{id}', 'PasajesController@show');
+});
+
+
