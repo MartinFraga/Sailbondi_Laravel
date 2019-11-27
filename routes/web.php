@@ -20,3 +20,7 @@ Route::get('/', 'MainController@index');
 Route::get('/faqs', 'MainController@faqs');
 
 Route::get('/contact', 'MainController@contact');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
