@@ -27,9 +27,12 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::group(["prefix" => "pasajes"], function() {
-    Route::get('/', ['uses' => 'PasajesController@index']);
 
+    Route::get('/create', ['uses' => 'PasajesController@create']);    
     Route::get('/show/{id}', 'PasajesController@show');
+
+    Route::post('/save', 'PasajesController@save');
+    
 });
 
 
