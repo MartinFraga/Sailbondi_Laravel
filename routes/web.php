@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('home');
 
 Route::get('/faqs', 'MainController@faqs');
 
@@ -28,6 +28,8 @@ Route::get('/montevideo', 'MainController@montevideo');
 Route::get('/punta', 'MainController@punta');
 
 Auth::routes();
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index');
 

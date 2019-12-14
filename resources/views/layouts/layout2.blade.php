@@ -37,13 +37,14 @@
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../faqs">FAQs</a>
+                            <a class="nav-link" href="/faqs">FAQs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../contact">Contacto</a>
+                            <a class="nav-link" href="/contact">Contacto</a>
                         </li>
+                        @guest
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Ingreso
                             </a>
@@ -52,6 +53,18 @@
                                 <a class="dropdown-item" href="/login">Login</a>
                             </div>
                         </li>
+                        @else
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ Auth::user()->name}}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+                            </div>
+                        </li>
+                        @endguest
+
                     </ul>
                     <span class="navbar-text text-white">
                         0810 123 0787
