@@ -20,9 +20,9 @@
         <!-- NAVBAR -->
         <div>
             <nav class="navbar navbar-expand-md navbar-dark bg-info container">
-                <a class="navbar-brand" href="#">
-                    <img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                        class="d-inline-block align-top" alt="">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/sailbondi.png" width="30" height="30"
+                            class="d-inline-block align-top" alt="">
                     Sailbondi
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -36,6 +36,12 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faqs">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact">Contacto</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,12 +51,6 @@
                                 <a class="dropdown-item" href="FormRegister.php">Registrarse</a>
                                 <a class="dropdown-item" href="FormLogin.html">Login</a>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faqs">FAQs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact">Contacto</a>
                         </li>
                     </ul>
                     <span class="navbar-text text-white">

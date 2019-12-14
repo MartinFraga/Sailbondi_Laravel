@@ -21,6 +21,12 @@ Route::get('/faqs', 'MainController@faqs');
 
 Route::get('/contact', 'MainController@contact');
 
+Route::get('/colonia', 'MainController@colonia');
+
+Route::get('/montevideo', 'MainController@montevideo');
+
+Route::get('/punta', 'MainController@punta');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -29,10 +35,21 @@ Route::get('/home', 'HomeController@index');
 Route::group(["prefix" => "pasajes"], function() {
 
     Route::get('/create', ['uses' => 'PasajesController@create']);    
-    Route::get('/show/{id}', 'PasajesController@show');
-
+    Route::get('/view/{id}', 'PasajesController@view');    
     Route::post('/save', 'PasajesController@save');
     
 });
 
 
+Route::group(["prefix" => "destinos"], function() {
+
+    Route::get('/view/{id}', 'DestinosController@view');    
+   
+});
+
+Route::group(["prefix" => "transacciones"], function() {
+
+    Route::get('/create/{destinoId}', 'TransaccionesController@create');    
+    Route::post('/save', 'TransaccionesController@save');
+   
+});

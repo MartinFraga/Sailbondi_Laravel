@@ -31,11 +31,19 @@ class PasajesController extends Controller
         // return view('pasajes.index');
     }
 
+    public function view($id) {
+        $pasaje = Pasajes::where("id", $id)
+        ->first();
 
+        return view('pasajes.show')->with(["id" => $id, "pasaje" => $pasaje]);
+    }
+
+    /*
     public function show($id) {
         $pasaje = Pasajes::where("id", $id)
                         ->first();
 
         return view('pasajes.show')->with(["id" => $id, "pasaje" => $pasaje]);
     }
+    */
 }

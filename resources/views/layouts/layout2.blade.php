@@ -18,13 +18,11 @@
     <div class="container">
 
         <!-- NAVBAR -->
-        <div  style="margin-bottom: 20px;">
+        <div class="mb-5">
             <nav class="navbar navbar-expand-md navbar-dark bg-info container">
-                <a href="/" style="display: inline-block">
-                    <img src="/images/sailbondi.png"
-                        width="50" height="50"
-                        class="img-fluid height: auto responsive rounded mx-auto d-block" alt="Logo Sailbondi">
-                <a class="navbar-brand" href="/" style="margin-left: 10px;">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/sailbondi.png" width="30" height="30"
+                        class="d-inline-block align-top" alt="">
                     Sailbondi
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -38,6 +36,12 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faqs">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact">Contacto</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,12 +52,6 @@
                                 <a class="dropdown-item" href="FormLogin.html">Login</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faqs">FAQs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact">Contacto</a>
-                        </li>
                     </ul>
                     <span class="navbar-text text-white">
                         0810 123 0787
@@ -61,6 +59,7 @@
                 </div>
             </nav>
         </div><!-- NAVBAR -->
+
         @yield('content')
 
         <!-- FOOTER -->
