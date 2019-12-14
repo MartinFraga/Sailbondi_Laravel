@@ -33,11 +33,11 @@
     <div class="form-row mt-4">
         <div class="form-group col-md-6">
             <label for="inputName">Nombre y Apellido</label>
-            <input type="text" class="form-control" id="inputName" name="passenger_name" placeholder="Nombre del Producto">
+            <input type="text" class="form-control" id="inputName" name="passenger_name" placeholder="Nombre y apellido completo del pasajero" required>
         </div>
         <div class="form-group col-md-6">
             <label for="inputDescription">DNI</label>
-            <input type="text" class="form-control" id="inputDescription" name="passenger_docnumber" placeholder="DNI">
+            <input type="text" class="form-control" id="inputDescription" name="passenger_docnumber" placeholder="Número de documento" required>
         </div>
     </div>
     <div class="form-row">

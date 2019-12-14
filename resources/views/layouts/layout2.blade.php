@@ -37,10 +37,10 @@
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="faqs">FAQs</a>
+                            <a class="nav-link" href="../../faqs">FAQs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact">Contacto</a>
+                            <a class="nav-link" href="../../contact">Contacto</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -48,8 +48,8 @@
                                 Ingreso
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="FormRegister.php">Registrarse</a>
-                                <a class="dropdown-item" href="FormLogin.html">Login</a>
+                                <a class="dropdown-item" href="/register">Registrarse</a>
+                                <a class="dropdown-item" href="/login">Login</a>
                             </div>
                         </li>
                     </ul>

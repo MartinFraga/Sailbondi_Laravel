@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col-md-12 text-center">
       <hr class="mt-5">
-      <p>Hace click y comenzá a viajar.</p>
+      <p class="lead"><b>Hace click y comenzá a viajar.</b></p>
       <a href="/transacciones/create/{{ $destino->id }}" class="btn btn-primary btn-lg" href="#" role="button">Comprar</a>
     </div>
   </div>

@@ -48,8 +48,8 @@
                                 Ingreso
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="FormRegister.php">Registrarse</a>
-                                <a class="dropdown-item" href="FormLogin.html">Login</a>
+                                <a class="dropdown-item" href="/register">Registrarse</a>
+                                <a class="dropdown-item" href="/login">Login</a>
                             </div>
                         </li>
                     </ul>

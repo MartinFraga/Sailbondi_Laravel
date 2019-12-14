@@ -18,20 +18,7 @@
         <p class="text-center py-1">{{ $destino["descrip"] }}</p>
     </div>
     @endforeach    
-    <!--
-    <div class="col-md-4">
-        <h3 class="text-center">Conoce Montevideo</h3>
-        <hr>
-        <a href="montevideo"><img src="images/PDE1.jpg" alt="Imagen Producto2" class="img-fluid rounded"></a>
-        <p class="text-center py-1">La combinación idea para quienes quieren disfrutar de Uruguay recorriendo las distintas atracciónes turisticas de la costa oriental.</p>
-    </div>
-    <div class="col-md-4">
-        <h3 class="text-center">Disfruta Punta del Este</h3>
-        <hr>
-        <a href="punta"><img src="images/Piriapolis.jpg" alt="Imagen Producto3" class="img-fluid rounded"></a>
-        <p class="text-center py-1">Tu opción ideal para disfrutar un buen descanso en las costas uruguayas, conectando con las naturaleza, playas y estilo particular del Este.</p>
-    </div>
-    -->
+    
 </div><!-- CARDS -->
 
 @endsection
