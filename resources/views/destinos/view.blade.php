@@ -18,7 +18,21 @@
     <div class="col-md-12 text-center">
       <hr class="mt-5">
       <p class="lead"><b>Hace click y comenzá a viajar.</b></p>
-      <a href="/transacciones/create/{{ $destino->id }}" class="btn btn-primary btn-lg" href="#" role="button">Comprar</a>
+      <form action="{{ route('agregarACarrito') }}" method="POST">
+        {{ csrf_field() }}
+        <select name="cantid" id="">
+          @for($i=1; $i<=4; $i++)
+          <option value="{{$i}}">{{$i}}</option>
+          @endfor
+
+        </select>
+      
+        <input type="hidden" name="id_producto" value="{{ $destino->id }}">
+
+        <button type="submit" class="btn btn-primary btn-lg">Agregar al carrito</button>
+
+      </form>
+      
     </div>
   </div>
 </div>

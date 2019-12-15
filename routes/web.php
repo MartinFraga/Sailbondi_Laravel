@@ -27,6 +27,8 @@ Route::get('/montevideo', 'MainController@montevideo');
 
 Route::get('/punta', 'MainController@punta');
 
+Route::post('/agregarACarrito', 'CarritoController@agregarPasaje')->name('agregarACarrito')->middleware('auth');
+
 Auth::routes();
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
