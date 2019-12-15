@@ -1,6 +1,14 @@
 @extends('layouts.layout')
 
 @section('content')
+
+<!-- CENTRAL IMAGE -->
+<div>
+            <img src="/images/sailbondi.png"
+                class="img-fluid max-width: 100% height: auto responsive rounded mx-auto d-block" alt="Logo Sailbondi">
+</div><!-- CENTRAL IMAGE -->
+
+
 <!-- BANNER -->
 <div class="bg-info text-center py-1 rounded">
     <h1 class="display-4 text-white pt-1">Sailbondi, tu nueva manera de viajar</h1>

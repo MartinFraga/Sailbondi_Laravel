@@ -1,10 +1,10 @@
 @extends('layouts.layout')
 
 @section('content')
+
 <!-- CENTRAL IMAGE -->
 <div>
-    <img src="imagenes/sailbondi.png"
-        class="img-fluid max-width: 100% height: auto responsive rounded mx-auto d-block" alt="">
+    <img src="/images/sailbondi.png" class="img-fluid max-width: 100% height: auto responsive rounded mx-auto d-block" alt="Logo Sailbondi">
 </div><!-- CENTRAL IMAGE -->
 
 <!-- BANNER -->

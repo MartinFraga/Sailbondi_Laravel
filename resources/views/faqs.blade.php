@@ -1,6 +1,12 @@
 @extends('layouts.layout')
 
 @section('content')
+
+<!-- CENTRAL IMAGE -->
+<div>
+    <img src="/images/sailbondi.png" class="img-fluid max-width: 100% height: auto responsive rounded mx-auto d-block" alt="Logo Sailbondi">
+</div><!-- CENTRAL IMAGE -->
+
 <!-- ACORDION -->
 <div class="accordion" id="accordionExample">
     <div class="card rounded">
