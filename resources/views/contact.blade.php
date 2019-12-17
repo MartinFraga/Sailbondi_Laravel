@@ -20,7 +20,7 @@
     {{ csrf_field() }}
     <div class="form-row mt-4">
         <div class="form-group col-md-6">
-            <label for="inputName">Nombre y Apellido</label>
+            <label for="inputName"><strong>Nombre y Apellido</strong></label>
             <input type="text" class="form-control" id="inputName" placeholder="Nombre Completo" name="name">
             @if ($errors->has('name'))
                 <small class="form-text invalid-feedback">{{ $errors->first('name') }}</small>
@@ -28,7 +28,7 @@
         </div>
         
         <div class="form-group col-md-6">
-            <label for="inputEmail">Email</label>
+            <label for="inputEmail"><strong>Email</strong></label>
             <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="email">
             @if ($errors->has('email'))
                 <small class="form-text invalid-feedback">{{ $errors->first('email') }}</small>
@@ -37,7 +37,7 @@
         
     </div>
     <div class="form-group">
-        <label for="inputMessage">Mensaje</label>
+        <label for="inputMessage"><strong>Mensaje</strong></label>
         <textarea type="text" class="form-control" id="inputMessage" placeholder="Dejanos aquí tu mensaje" name="message"></textarea>
         @if ($errors->has('message'))
             <small class="form-text invalid-feedback">{{ $errors->first('message') }}</small>

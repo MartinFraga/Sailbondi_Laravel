@@ -87,7 +87,7 @@
 
         <!-- FOOTER -->
         <footer class="bg-secondary text-center mt-4 py-4">
-            <a href="#" class="text-white"><b>Atención al cliente</b> - Grierson Cecilia Boulevard 787, Ciudad Autónoma de Buenos Aires (1107) - Argentina</a>
+            <a href="/contact" class="text-white"><b>Atención al cliente</b> - Grierson Cecilia Boulevard 787, Ciudad Autónoma de Buenos Aires (1107) - Argentina</a>
         </footer><!-- FOOTER -->
 
     </div><!-- CONTAINER -->

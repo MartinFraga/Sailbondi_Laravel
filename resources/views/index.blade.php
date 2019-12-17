@@ -20,7 +20,7 @@
 <div class="row py-5">
     @foreach($destinos as $destino)
     <div class="col-md-4">
-        <h3 class="text-center">{{ $destino["title"] }}</h3>
+        <h3 class="text-center"><mark>{{ $destino["title"] }}</mark></h3>
         <hr>
         <a href="/destinos/view/{{ $destino['id'] }}"><img src="{{ $destino['foto'] }}" alt="Imagen Producto1" class="img-fluid rounded"></a>
         <p class="text-center py-1">{{ $destino["descrip"] }}</p>
