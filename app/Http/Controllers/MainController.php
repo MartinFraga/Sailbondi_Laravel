@@ -21,12 +21,7 @@ class MainController extends Controller
         return view('faqs');
     }
 
-    public function contact() {
-        return view('contact');
-    }
-
-
-
+   
     public function colonia() {
         return view('colonia');
     }

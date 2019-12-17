@@ -11,8 +11,8 @@
 
 <!-- BANNER -->
 <div class="bg-info text-center py-1 rounded">
-    <h1 class="display-4 text-white pt-1">Sailbondi, tu nueva manera de viajar</h1>
-    <p class="lead text-white">Colonia / Motenvideo / Punta del Este</p>
+    <h1 class="display-4 text-white pt-1"><strong>Sailbondi, tu nueva manera de viajar</strong></h1>
+    <p class="lead text-white"><em>Colonia / Motenvideo / Punta del Este</em></p>
 </div><!-- BANNER -->
 
 <!-- CARDS -->

@@ -19,7 +19,8 @@ Route::get('/', 'MainController@index')->name('home');
 
 Route::get('/faqs', 'MainController@faqs');
 
-Route::get('/contact', 'MainController@contact');
+Route::get('/contact', 'ContactMessageController@create');
+Route::post('/contact', 'ContactMessageController@store')->name('contact.store');
 
 Route::get('/colonia', 'MainController@colonia');
 

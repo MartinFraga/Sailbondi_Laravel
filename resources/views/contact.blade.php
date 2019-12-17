@@ -13,57 +13,35 @@
     </div><!-- BANNER -->
 
 <!--FORM  -->
-<form>
+@if (Session::has('flash_message'))
+    <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
+@endif
+<form method="post" action="{{ route('contact.store') }}">
+    {{ csrf_field() }}
     <div class="form-row mt-4">
         <div class="form-group col-md-6">
-            <label for="inputName4">Nombre</label>
-            <input type="text" class="form-control" id="inputName4" placeholder="Nombre Completo">
+            <label for="inputName">Nombre y Apellido</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Nombre Completo" name="name">
+            @if ($errors->has('name'))
+                <small class="form-text invalid-feedback">{{ $errors->first('name') }}</small>
+            @endif
         </div>
+        
         <div class="form-group col-md-6">
-            <label for="inputSurname4">Apellido</label>
-            <input type="text" class="form-control" id="inputSurname4" placeholder="Apellido">
+            <label for="inputEmail">Email</label>
+            <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="email">
+            @if ($errors->has('email'))
+                <small class="form-text invalid-feedback">{{ $errors->first('email') }}</small>
+            @endif
         </div>
-        <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="inputTel4">Teléfono</label>
-            <input type="teléfono" class="form-control" id="inputTel4" placeholder="Teléfono de contacto">
-        </div>
+        
     </div>
     <div class="form-group">
-        <label for="inputAddress">Dirección</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Avenida Principal">
-    </div>
-    <div class="form-group">
-        <label for="inputAddress2">Indicaciones</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Lote, Piso o Departamento">
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="inputCity">Ciudad o Localidad</label>
-            <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="inputState">Provincia</label>
-            <select id="inputState" class="form-control">
-                <option selected>Seleccione...</option>
-                <option>...</option>
-            </select>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="inputZip">Código Postal</label>
-            <input type="text" class="form-control" id="inputZip">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-                Quiero que me contacten
-            </label>
-        </div>
+        <label for="inputMessage">Mensaje</label>
+        <textarea type="text" class="form-control" id="inputMessage" placeholder="Dejanos aquí tu mensaje" name="message"></textarea>
+        @if ($errors->has('message'))
+            <small class="form-text invalid-feedback">{{ $errors->first('message') }}</small>
+        @endif
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form><!--FORM  -->
