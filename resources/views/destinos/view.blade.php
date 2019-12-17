@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
+<div class="mt-3">
 <div class="jumbotron">
   <div class="row">
     <div class="col-md-4">
@@ -38,5 +39,6 @@
     </div>
 
   </div>
+</div>
 </div>
 @endsection

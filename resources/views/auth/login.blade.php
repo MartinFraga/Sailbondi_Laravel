@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
+<div class="mt-3">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -69,5 +70,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
