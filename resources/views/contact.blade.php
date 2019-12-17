@@ -14,7 +14,7 @@
 
 <!--FORM  -->
 @if (Session::has('flash_message'))
-    <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
+    <div class="alert alert-success mt-2"><strong>{{ Session::get('flash_message') }}</strong></div>
 @endif
 <form method="post" action="{{ route('contact.store') }}">
     {{ csrf_field() }}
