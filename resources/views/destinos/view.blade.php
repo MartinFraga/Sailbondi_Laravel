@@ -31,11 +31,11 @@
         <input type="hidden" name="id_producto" value="{{ $destino->id }}">
 
         <button type="submit" class="btn btn-primary btn-lg">Agregar al carrito</button>
-
+              
       </form>
      
       <p class="mt-5"><kbd>Para más de 5 pasajeros, contactános a nuestro call center al 0810-123-0787</kbd></p>
-
+    
     </div>
 
   </div>

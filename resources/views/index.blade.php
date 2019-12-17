@@ -29,4 +29,18 @@
     
 </div><!-- CARDS -->
 
+<div>
+    <p id="blink" class="text-center">Aprovecha nuestras ofertas de Verano!</p>
+</div>
+
+<script>
+    window.setInterval (BlinkIt, 500);
+    var color = "#0057a0";
+    function BlinkIt () {
+    var blink = document.getElementById ("blink");
+    color = (color == "#ffffff")? "#0057a0" : "#ffffff";
+    blink.style.color = color;
+    blink.style.fontSize='36px';}
+</script>
+
 @endsection

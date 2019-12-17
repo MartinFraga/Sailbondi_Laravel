@@ -43,6 +43,6 @@
             <small class="form-text invalid-feedback">{{ $errors->first('message') }}</small>
         @endif
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary" disabled>Enviar</button>
 </form><!--FORM  -->
 @endsection
