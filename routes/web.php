@@ -23,7 +23,7 @@ Route::get('/contact', 'ContactMessageController@create');
 Route::post('/contact', 'ContactMessageController@store')->name('contact.store');
 
 Route::get('/newsletter', 'NewsletterController@create');
-Route::post('/newsletter', 'NewsletterController@store')->name('newsletter.store');
+Route::post('/newsletter/store', 'NewsletterController@store')->name('newsletter.store');
 
 Route::get('/colonia', 'MainController@colonia');
 
@@ -50,14 +50,15 @@ Route::group(["prefix" => "pasajes"], function() {
 
 
 Route::group(["prefix" => "destinos"], function() {
-    Route::get('/view/{id}', 'DestinosController@view');    
-   
+    Route::get('/view/{id}', 'DestinosController@view');   
 });
 
 Route::group(["prefix" => "admin"], function() {
     Route::get('/', 'DestinosController@index')->middleware('admin');    
     Route::get('/index', 'DestinosController@index')->middleware('admin');  
     Route::get('/manage/{option}/{id?}', 'DestinosController@manage')->middleware('admin');  
+    Route::post('/save', 'DestinosController@save')->middleware('admin');  
+    Route::get('/delete/{id}', 'DestinosController@delete')->middleware('admin');
 });
 
 Route::group(["prefix" => "transacciones"], function() {

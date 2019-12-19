@@ -10,13 +10,13 @@ use App\ProdCart;
 class CarritoController extends Controller
 {
     public function agregarPasaje(Request $request) {
-        $cantid=$request->cantid;
-        $userid=Auth::id();
+        $cantid = $request->cantid;
+        $userid = Auth::id();
         $product_id=$request->id_producto;
 
         $prodCart = new ProdCart();
         $prodCart->pasajes_id = $product_id;
-        $prodCart->user_id = $userId;
+        $prodCart->user_id = $userid;
         $prodCart->quantity = $cantid;
 
         $prodCart->save();

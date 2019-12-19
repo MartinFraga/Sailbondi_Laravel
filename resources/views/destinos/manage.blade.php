@@ -2,9 +2,12 @@
 
 @section('content')
 
-<form method="post" action="admin/save/{{ $option }}">
+<form method="post" action="/admin/save">
     {{ csrf_field() }}
     <div class="form-row mt-4">
+        <input type="hidden" name="option" value="{{ $option }}">
+        <input type="hidden" name="id" value="{{ $id }}">
+
         <div class="form-group col-md-6">
             <label for="inputName"><strong>Nombre</strong></label>
             <input type="text" class="form-control" id="inputName" name="name"

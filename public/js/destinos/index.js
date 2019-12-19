@@ -11,15 +11,22 @@ function eliminar(id) {
     }).then((result) => {
         if (result.value) {
 
-            Swal.fire(
-                'Eliminado',
-                'El Destino ha sido eliminado',
-                'success'
-            )
+            fetch('/admin/delete/' + id)
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (data) {
+                    
+                    Swal.fire({
+                        title: 'Eliminado',
+                        text: data.message,
+                        icon: 'success'
+                    }).then((result) => {
+                        location.reload();
+                    });
+                    
+                });
+
         }
     });
-}
-
-function goTo(url){
-    window.location.href = url;
 }

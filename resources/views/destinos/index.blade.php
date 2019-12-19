@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="container my-5">
-
+    @if (Session::has('flash_message'))
+        <div class="alert alert-success mt-2"><strong>{{ Session::get('flash_message') }}</strong></div>
+    @endif
     <div class="card">
         <div class="card-header text-center">
             Destinos
