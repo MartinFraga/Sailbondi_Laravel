@@ -19,7 +19,7 @@
     <div class="col-md-12 text-center">
       <hr class="mt-5">
       <p class="lead"><b>Selecciona la cantidad de pasajeros:</b></p>
-      <form action="{{ route('agregarACarrito') }}" method="POST">
+      <form action="{{ route('carrito.add') }}" method="POST">
         {{ csrf_field() }}
         <select name="cantid" id="" class="mr-2">
           @for($i=1; $i<=5; $i++)

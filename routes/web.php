@@ -31,7 +31,6 @@ Route::get('/montevideo', 'MainController@montevideo');
 
 Route::get('/punta', 'MainController@punta');
 
-Route::post('/agregarACarrito', 'CarritoController@agregarPasaje')->name('agregarACarrito')->middleware('auth');
 
 Auth::routes();
 
@@ -40,12 +39,11 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name
 Route::get('/home', 'HomeController@index');
 
 
-Route::group(["prefix" => "pasajes"], function() {
-
-    Route::get('/create', ['uses' => 'PasajesController@create']);    
-    Route::get('/view/{id}', 'PasajesController@view');    
-    Route::post('/save', 'PasajesController@save');
-    
+Route::group(["prefix" => "carrito"], function() {
+    Route::post('/add', 'CarritoController@add')->name('carrito.add')->middleware('auth');
+    Route::get('/show', 'CarritoController@show')->name('carrito.show')->middleware('auth');
+    Route::get('/delete/{id}', 'CarritoController@delete')->middleware('auth');
+    Route::get('/save', 'CarritoController@save')->middleware('auth');    
 });
 
 
