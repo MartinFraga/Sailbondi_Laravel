@@ -26,11 +26,12 @@ Route::get('/newsletter', 'NewsletterController@create');
 Route::post('/newsletter/store', 'NewsletterController@store')->name('newsletter.store');
 
 Route::get('/colonia', 'MainController@colonia');
-
 Route::get('/montevideo', 'MainController@montevideo');
-
 Route::get('/punta', 'MainController@punta');
 
+
+Route::get('profile', 'UsersController@profile');
+Route::post('profile', 'UsersController@update_profile');
 
 Auth::routes();
 

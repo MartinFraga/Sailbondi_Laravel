@@ -67,12 +67,18 @@
                             </div>
                         </li>
                         @else
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">                            
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name}}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-item">
+                                    <img class="rounded-circle" src="/storage/avatars/{{ Auth::user()->avatar }}" height="50" width="50"/>
+                                </div>
+                                <a class="dropdown-item" href="/profile">
+                                    Mi Perfil
+                                </a>
                                 <a class="dropdown-item" href="/carrito">Carrito</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                             </div>
