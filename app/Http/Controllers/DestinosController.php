@@ -23,7 +23,7 @@ class DestinosController extends Controller
 
     public function save(Request $request) {
         
-        $message = 'Mensaje...';
+        $message = 'Error, la información no pudo ser actualizada';
 
         if($request["id"]) {
             if( Destinos::where('id', $request["id"])

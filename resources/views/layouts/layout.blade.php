@@ -79,6 +79,11 @@
                                 <a class="dropdown-item" href="/profile">
                                     Mi Perfil
                                 </a>
+                                @if (Auth::user()->es_admin === 'S')
+                                <a class="dropdown-item" href="/admin">
+                                    Administrar Destinos
+                                </a>
+                                @endif
                                 <a class="dropdown-item" href="/carrito">Carrito</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                             </div>
