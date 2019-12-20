@@ -24,7 +24,7 @@ class NewsletterController extends Controller
 
         $newsletter = new Newsletter();
 
-        $newsletter->nombre = $request["nombre"];
+        $newsletter->nombre = $request["name"];
         $newsletter->email = $request["email"];
         $newsletter->provincia = $request["provincia"];
         $newsletter->municipio = $request["municipio"];        
