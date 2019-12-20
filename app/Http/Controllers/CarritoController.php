@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Carrito;
 use App\Transaccion;
+use App\TransaccionesItem;
 
 class CarritoController extends Controller
 {
@@ -22,7 +23,7 @@ class CarritoController extends Controller
 
         $prodCart->save();
 
-        return redirect('/carrito/show'); 
+        return redirect('/carrito/index'); 
     }
 
     public function delete($id) {
@@ -46,7 +47,7 @@ class CarritoController extends Controller
         ->get();
 
         $total = 0;
-        foreach($carrito as $item){
+        foreach($carrito as $item) {
             $total += $item->destino->precio;
         }
 
@@ -54,19 +55,32 @@ class CarritoController extends Controller
         $transaccion->user_id = Auth::id();
         $transaccion->total = $total;
 
-        if($transaccion->save()){
+        $messsage = "";
+
+        if ($transaccion->save()) {
+            foreach ($carrito as $item) {
+                $itemTransaccion = new TransaccionesItem();
+                $itemTransaccion->transaccion_id = $transaccion->id;
+                $itemTransaccion->destino_id = $item->destino->id;
+                $itemTransaccion->cantidad = $item->quantity;
+                $itemTransaccion->precio = $item->destino->precio;
+                $itemTransaccion->save();
+            }
             Carrito::where('user_id', Auth::id())->delete();
-        }        
+            $messsage = "Compra Exitosa";
+
+            return view('transacciones.confirm')->with(["flash_message" => $messsage, "transaccion" => $transaccion]);
+        }
         
-        return redirect('/'); 
+        return redirect()->back()->with(["flash_message" => $messsage]); 
     }
 
-    function show() {
+    function index() {
         $carrito = Carrito::where('user_id', Auth::id())
         ->with('destino')
         ->with('user')
         ->get();
 
-        return view('carrito.show')->with(["carrito" => $carrito]);
+        return view('carrito.index')->with(["carrito" => $carrito]);
     }
 }

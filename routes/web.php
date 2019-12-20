@@ -40,8 +40,9 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::group(["prefix" => "carrito"], function() {
-    Route::post('/add', 'CarritoController@add')->name('carrito.add')->middleware('auth');
-    Route::get('/show', 'CarritoController@show')->name('carrito.show')->middleware('auth');
+    Route::get('/', 'CarritoController@index')->middleware('auth');
+    Route::get('/index', 'CarritoController@index')->name('carrito.index')->middleware('auth');
+    Route::post('/add', 'CarritoController@add')->name('carrito.add')->middleware('auth');    
     Route::get('/delete/{id}', 'CarritoController@delete')->middleware('auth');
     Route::get('/save', 'CarritoController@save')->middleware('auth');    
 });

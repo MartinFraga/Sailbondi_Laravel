@@ -3,6 +3,9 @@
 @section('content')
 
 <div class="container my-5">
+    @if (Session::has('flash_message'))
+    <div class="alert alert-success mt-2"><strong>{{ Session::get('flash_message') }}</strong></div>
+    @endif
     <div class="card">
         <div class="card-header">
             <table border="0" width="100%">
@@ -20,6 +23,7 @@
                 </td>
             </table>
         </div>
+
         <ul class="list-group list-group-flush">
             @foreach($carrito as $item)
             <li class="list-group-item">
@@ -30,7 +34,7 @@
                     <td width="20%" style="text-align:left;">
                         {{ $item->quantity }}
                     </td>
-                    <td  width="20%" style="text-align:left;">
+                    <td width="20%" style="text-align:left;">
                         {{ $item->destino->precio }}
                     </td>
                     <td>
@@ -40,33 +44,42 @@
             </li>
             @endforeach
         </ul>
+        @if (!(count($carrito) > 0))
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center">
+                No hay productos en el carrito
+            </li>
+        </ul>
+        @endif
         <div class="card-footer">
+            @if (count($carrito) > 0)
             <table border="0" width="100%">
                 <td width="50%">
                     <b>Total</b>
                 </td>
                 <td width="20%">
                     @php
-                        $total = 0;
-                        foreach($carrito as $item){
-                            $total += $item->quantity;
-                        }
-                        echo $total;                        
+                    $total = 0;
+                    foreach($carrito as $item){
+                    $total += $item->quantity;
+                    }
+                    echo $total;
                     @endphp
                 </td>
                 <td width="20%" style="text-align:left;">
                     @php
-                        $total = 0;
-                        foreach($carrito as $item){
-                            $total += $item->destino->precio;
-                        }
-                        echo $total;                        
+                    $total = 0;
+                    foreach($carrito as $item){
+                    $total += $item->destino->precio;
+                    }
+                    echo $total;
                     @endphp
                 </td>
                 <td>
                     <button class="btn btn-success btn-sm float-right" onclick="guardar()">COMPRAR</button>
                 </td>
             </table>
+            @endif
         </div>
     </div>
 </div>
@@ -77,5 +90,5 @@
 
 @endsection
 @section('scripts')
-    <script src="/js/carrito/show.js"></script>
+<script src="/js/carrito/index.js"></script>
 @endsection

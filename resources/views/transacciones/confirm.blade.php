@@ -7,7 +7,7 @@
         <img src="/images/boarding_pass.jpg" alt="Imagen Producto1" class="img-fluid rounded">
 
     
-        <h3>Felicitaciones tu número de pasaje es el UXW-{{ $transaccion->id }}</h3>
+        <h3>Felicitaciones tus pasajes han sido emitidos con el código de reserva UXW-{{ $transaccion->id }}</h3>
 
         <h5>En unos minutos recibiras un email con las instrucciones para procesar tu pago.</h5>
     </div>
